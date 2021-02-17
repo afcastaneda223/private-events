@@ -4,3 +4,14 @@
 <h2>Creator: <%= @event.user.name%></h2>
 
 <p><strong>Details:</strong> <%= @event.description%></p>
+
+
+
+<hr>
+
+<% @attendances.each do |attendance|  %>
+
+
+    <p><%= link_to attendance.attendee.name, user_path(attendance.attendee_id) %></p>
+
+<% end %>
