@@ -1,0 +1,16 @@
+<h1>Profile of  <%= session[:current_user]["name"] %></h1>
+
+
+
+
+
+<hr>
+
+<% @events.each do |event|  %>
+
+    <p><%= link_to event.name, event_path(event.id) %></p>
+
+<% end %>
+
+
+

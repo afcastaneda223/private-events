@@ -1,0 +1,16 @@
+<h1>Make a new Event!</h1>
+
+<%= form_with model: @event do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :description %>
+  <%= form.submit %>
+<% end %>
+
+
+<h1>All events:</h1>
+
+<% @events.each do |event|  %>
+
+    <p><%= link_to event.name, event_path(event.id) %></p>
+
+<% end %>

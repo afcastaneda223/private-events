@@ -1,0 +1,7 @@
+<h1>Login!</h1>
+<h3>Enter your name!</h3>
+
+<%= form_with model: @user do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>
