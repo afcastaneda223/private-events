@@ -1,24 +1,55 @@
-# README
+# The Private-Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create a page similitar to Eventbrite which allows users to create events and then manage user signups.
 
-Things you may want to cover:
+## About
 
-* Ruby version
+Users can create events and send invitations and parties. Events take place at a specific date and location.
 
-* System dependencies
+In this project we:
 
-* Configuration
+![screenshot]()
 
-* Database creation
+## Usage
 
-* Database initialization
+- Clone the repo "https://github.com/afcastaneda223/private-events".
+- Write "rails s"
 
-* How to run the test suite
+## Technologies
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby
+- Rails
+- SQLite3
+- VSCode
+- Bootstrap
 
-* Deployment instructions
+## Authors
 
-* ...
+👤 **Andres Felipe Castañeda Ramos**
+
+- Github: [@afcastaneda223](https://github.com/afcastaneda223)
+- Twitter: [@afcastaneda](https://twitter.com/afcastaneda)
+- Linkedin: [Andres Felipe Castañeda](www.linkedin.com/in/andres-castaneda223)
+
+👤 **Mohamed Atef**
+
+- GitHub: [@mohamed-js](https://github.com/Mohamed-js)
+- Twitter: [@demovejetta](https://twitter.com/demovejetta)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-js/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+### Acknowledgements
+
+- Microverse
+- The Odin Project
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
