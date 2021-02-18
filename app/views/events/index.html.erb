@@ -29,6 +29,7 @@
 <div class="row">
     <div class="col-6">
         <h2>Past Events</h2>
+        <% @events = Event.past %>
         <% @events.each do |event|  %>
             <% if event.date < Time.now %>
             <p><%= link_to event.name, event_path(event.id) %></p>
@@ -37,6 +38,7 @@
     </div>
     <div class="col-6">
         <h2>Upcomming events</h2>
+        <% @events = Event.future %>
         <% @events.each do |event|  %>
             <% if event.date > Time.now %>
             <p><%= link_to event.name, event_path(event.id) %></p>
@@ -45,7 +47,5 @@
     </div>
 </div>
 
-
-
-
 </div>
+
