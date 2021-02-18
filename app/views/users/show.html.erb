@@ -1,25 +1,24 @@
 
-
-<h1>Profile of  <%= @user.name  %></h1>
-
-<hr>
-<div class="row">
-    <div class="col-6">
-        <h2>Past Events</h2>
-        <% @events.each do |event|  %>
-            <% if event.event.date < Time.now %>
-            <p><%= link_to event.event.name, event_path(event.id) %></p>
+<div class= "container bg-light m-3 p-3 text-center">
+    <h1>Profile of  <%= @user.name  %></h1>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <h2>Past Events</h2>
+            <% @events.each do |event|  %>
+                <% if event.event.date < Time.now %>
+                <p><%= link_to event.event.name, event_path(event.id) %></p>
+                <% end %>
             <% end %>
-        <% end %>
-    </div>
-    <div class="col-6">
-        <h2>Upcomming events</h2>
-        <% @events.each do |event|  %>
-            <% if event.event.date > Time.now %>
-            <p><%= link_to event.event.name, event_path(event.id) %></p>
+        </div>
+        <div class="col-6">
+            <h2>Upcomming events</h2>
+            <% @events.each do |event|  %>
+                <% if event.event.date > Time.now %>
+                <p><%= link_to event.event.name, event_path(event.id) %></p>
+                <% end %>
             <% end %>
-        <% end %>
+        </div>
     </div>
 </div>
-
 
