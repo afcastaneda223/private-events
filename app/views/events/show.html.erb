@@ -1,4 +1,8 @@
 <h1><%= @event.name%></h1>
+
+<%= link_to "Attend this event", events_attend_path(@event.id)  %>
+<%= @event.id  %>
+
 <p><%= @event.date%></p>
 <hr>
 <h2>Creator: <%= @event.user.name%></h2>

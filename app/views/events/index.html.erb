@@ -1,18 +1,33 @@
-<h1>Make a new Event!</h1>
+<div class="container bg-light m-3 p-3">
+  <h1 class= "text-center">Make a new Event!</h1>
 
-<%= form_with model: @event do |form| %>
-  <%= form.label :name %> 
-  <%= form.text_field :name %>
-  <%= form.label :description %>
-  <%= form.text_field :description %>
-  <%= form.submit %>
-<% end %>
+  <%= form_with model: @event do |form| %>
+  <div class="form-group">
+    <%= form.label :name %> 
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form group mb-3">
+    <%= form.label :description %>
+    <%= form.text_field :description, class: "form-control" %>
+  </div>
+
+    <button class="btn btn-primary" type="submit">Create Event</button>
+
+  <% end %>
+</div>
 
 
-<h1>All events:</h1>
+<div class="container bg-light m-3 p-3">
+
+
+<h1 class= "text-center" >All events:</h1>
 
 <% @events.each do |event|  %>
-
-    <p><%= link_to event.name, event_path(event.id) %></p>
-
+    <ul class="list-group">
+     <li class="list-group-item text-center">
+            <%= link_to event.name, event_path(event.id) %>
+     </li>
+    </ul>
 <% end %>
+
+</div>
