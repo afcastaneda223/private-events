@@ -1,7 +1,7 @@
 <h1><%= @event.name%></h1>
 
-<%= link_to "Attend this event", events_attend_path(@event.id)  %>
-<%= @event.id  %>
+<%= link_to "Attend this event", "/events/attend/#{@event.id}"%>
+
 
 <p><%= @event.date%></p>
 <hr>
