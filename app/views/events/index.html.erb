@@ -26,12 +26,26 @@
 
 <h1 class= "text-center" >All events:</h1>
 
-<% @events.each do |event|  %>
-    <ul class="list-group">
-     <li class="list-group-item text-center">
-            <%= link_to event.name, event_path(event.id) %>
-     </li>
-    </ul>
-<% end %>
+<div class="row">
+    <div class="col-6">
+        <h2>Past Events</h2>
+        <% @events.each do |event|  %>
+            <% if event.date < Time.now %>
+            <p><%= link_to event.name, event_path(event.id) %></p>
+            <% end %>
+        <% end %>
+    </div>
+    <div class="col-6">
+        <h2>Upcomming events</h2>
+        <% @events.each do |event|  %>
+            <% if event.date > Time.now %>
+            <p><%= link_to event.name, event_path(event.id) %></p>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+
+
+
 
 </div>
