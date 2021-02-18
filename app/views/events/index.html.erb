@@ -27,9 +27,7 @@
 <h1 class= "text-center" >All events:</h1>
 
 <div class="row">
-    <%
-=begin%>
- <div class="col-6">
+    <div class="col-6">
         <h2>Past Events</h2>
 
         <% Event.past.each do |event|  %>
@@ -37,9 +35,7 @@
             <p><%= link_to event.name, event_path(event.id) %></p>
             <% end %>
         <% end %>
-    </div> 
-<%
-=end%>
+    </div>
     <div class="col-6">
         <h2>Upcomming events</h2>
 
