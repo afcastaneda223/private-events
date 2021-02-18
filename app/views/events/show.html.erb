@@ -15,7 +15,6 @@
 
 <% @attendances.each do |attendance|  %>
 
-
     <p><%= link_to attendance.attendee.name, user_path(attendance.attendee_id) %></p>
 
 <% end %>
