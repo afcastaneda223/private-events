@@ -7,8 +7,14 @@ Create a page similitar to Eventbrite which allows users to create events and th
 Users can create events and send invitations and parties. Events take place at a specific date and location.
 
 In this project we:
+- Made the base of the events application that users can use to set events, invites, and attend parties.
+- Made models for users and events.
+- Made the associations between models.
+- Made a simple design for the interface.
+- Made a simple login - sign-up form.
 
-![screenshot]()
+![screenshot](./screenshot.png)
+
 
 ## Usage
 
