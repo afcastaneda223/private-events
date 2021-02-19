@@ -31,18 +31,14 @@
         <h2>Past Events</h2>
 
         <% Event.past.each do |event|  %>
-            <% if event.date < Time.now %>
             <p><%= link_to event.name, event_path(event.id) %></p>
-            <% end %>
         <% end %>
     </div>
     <div class="col-6">
         <h2>Upcomming events</h2>
 
-        <% Event.future.each do |event|  %>
-            <% if event.date > Time.now %>
+        <% Event.future.each do |event|  %>           
             <p><%= link_to event.name, event_path(event.id) %></p>
-            <% end %>
         <% end %>
     </div>
 </div>
