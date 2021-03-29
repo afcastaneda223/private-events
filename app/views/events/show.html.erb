@@ -1,0 +1,23 @@
+
+<div class= "container bg-light m-3 p-3 text-center">
+
+<h1><%= @event.name%></h1>
+
+<%= link_to "Attend this event", "/events/attend/#{@event.id}"%>
+
+
+<hr>
+<h2 class= "text-center">Created by: <%= @event.user.name%></h2>
+
+<h4><strong>Details:</strong> <%= @event.description%></h4>
+
+
+<hr>
+    <h4>Attending:</h4>
+
+<% @attendances.each do |attendance|  %>
+    <h5><%= link_to attendance.attendee.name, user_path(attendance.attendee_id) %></h5>
+
+<% end %>
+
+</div>
